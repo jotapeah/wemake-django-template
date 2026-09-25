@@ -15,7 +15,7 @@ Versions
 --------
 
 Sometimes, when we break something heavily, we create a version.
-That's is required for our users, so they can use old releases to create
+That is required for our users, so they can use old releases to create
 projects as they used to be a long time ago.
 
 However, we do not officially support older versions.
@@ -35,7 +35,7 @@ other than just copy-pasting diffs from new versions.
 Goodbye, pipenv!
 ~~~~~~~~~~~~~~~~
 
-This version requires a manual migration step.
+This is an older migration step from ``pipenv`` to ``poetry``.
 
 1. You need to install ``poetry``
 2. You need to create a new ``pyproject.toml`` file with ``poetry init``

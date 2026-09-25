@@ -9,7 +9,7 @@ We use a lot of 3rd party tools to achieve that.
 Django
 ------
 
-Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/5.2/topics/security/>`_
+Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/6.1/topics/security/>`_
 that are all turned on by default in this template.
 
 We also :ref:`enforce <going-to-production>` all the best practices
@@ -35,19 +35,19 @@ We use strong algorithms for password hashing:
 Dependencies
 ------------
 
-We use `poetry <https://poetry.eustace.io/>`_ which ensures
+We use `poetry <https://python-poetry.org/>`_ which ensures
 that all the dependencies hashes match during the installation process.
 Otherwise, the build will fail.
 So, it is almost impossible to replace an already existing package
 with a malicious one.
 
-We also use `safety <https://github.com/pyupio/safety>`_
+We also use `pip-audit <https://github.com/pypa/pip-audit>`_
 to analyze vulnerable dependencies to prevent the build
 to go to the production with known unsafe dependencies.
 
 .. code:: bash
 
-  safety check
+  pip-audit --desc
 
 We also use `Github security alerts <https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/>`_
 for our main template repository.
@@ -97,7 +97,7 @@ There are different tools to help you:
 - `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
 - `trivy <https://github.com/knqyf263/trivy>`_ - a simple and comprehensive vulnerability scanner for containers
 
-But, even after all you attempts to secure your application,
+But, even after all your attempts to secure your application,
 it **won't be 100% safe**. Do not fall into this false feeling of security.
 
 

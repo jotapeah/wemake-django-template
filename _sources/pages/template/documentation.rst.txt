@@ -66,16 +66,6 @@ How to contribute
 We enforce everyone to write clean and explaining documentation.
 However, there are several rules about writing styling.
 
-We are using `doc8 <https://pypi.python.org/pypi/doc8>`_ to validate our docs.
-So, here's the command to do it:
-
-.. code:: bash
-
-  doc8 ./docs
-
-This is also used in our CI process, so your build will fail
-if there are violations.
-
 
 Useful plugins
 --------------
@@ -92,7 +82,7 @@ Further reading
 ---------------
 
 - `sphinx <http://www.sphinx-doc.org/en/stable/>`_
-- `sphinx with django <https://docs.djangoproject.com/en/5.2/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
+- `sphinx with django <https://docs.djangoproject.com/en/6.1/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
 - `sphinx-autodoc-typehints <https://github.com/agronholm/sphinx-autodoc-typehints>`_
 - `Architecture Decision Record (ADR) <https://github.com/joelparkerhenderson/architecture_decision_record>`_
 - `adr-tools <https://github.com/npryce/adr-tools>`_

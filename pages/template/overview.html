@@ -1,15 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="../../">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Development" href="development.html" /><link rel="prev" title="Welcome to wemake-django-template’s documentation!" href="../../index.html" />
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Development" href="development.html"><link rel="prev" title="Welcome to wemake-django-template’s documentation!" href="../../index.html">
 
-    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Overview - wemake-django-template 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
     
 
@@ -144,14 +144,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -161,8 +157,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -170,8 +165,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -179,8 +173,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -188,7 +181,6 @@
     <div class="sidebar-container">
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
-  
   
   <span class="sidebar-brand-text">wemake-django-template 0.1.0 documentation</span>
   
@@ -248,8 +240,7 @@
   </a>
 </div>
 <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -257,8 +248,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -296,19 +286,19 @@ copied to the <code class="docutils literal notranslate"><span class="pre">docke
 You need to install the required plugin for your IDE in order to enable it</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> - file that specifies
 what should we commit into the repository and we should not</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> - GitLab CI configuration file.
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> - Gitlab CI configuration file.
 It basically defines what to do with your project
 after pushing it to the repository. Currently it is used for testing
 and releasing a <code class="docutils literal notranslate"><span class="pre">docker</span></code> image</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.python-version</span></code> - file that specifies the Python version
-to be used for the project, particularly when using <cite>pyenv</cite>.
+to be used for the project, particularly when using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>.
 This file helps in maintaining a consistent Python environment
 across different machines and environments</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code> - file that contains a chronological
 log of all notable changes made to the project. It provides
 a comprehensive overview of the project’s evolution and
 helps users and contributors understand the development history</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> - this the file specifies <code class="docutils literal notranslate"><span class="pre">docker</span></code> services
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> - this file specifies <code class="docutils literal notranslate"><span class="pre">docker</span></code> services
 that are needed for development and testing</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.override.yml</span></code> - local override for <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code>.
 Is applied automatically and implicitly when
@@ -330,7 +320,7 @@ and teardown for local development</p></li>
 <h3>server<a class="headerlink" href="#server" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">server/__init__.py</span></code> - package definition, empty file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server/urls.py</span></code> - <code class="docutils literal notranslate"><span class="pre">django</span></code> <a class="reference external" href="https://docs.djangoproject.com/en/5.2/topics/http/urls/">urls definition</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server/urls.py</span></code> - <code class="docutils literal notranslate"><span class="pre">django</span></code> <a class="reference external" href="https://docs.djangoproject.com/en/6.1/topics/http/urls/">urls definition</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">server/wsgi.py</span></code> - <code class="docutils literal notranslate"><span class="pre">django</span></code> <a class="reference external" href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">wsgi definition</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">server/asgi.py</span></code> - <code class="docutils literal notranslate"><span class="pre">django</span></code> <a class="reference external" href="https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface">asgi definition</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">server/apps/</span></code> - place to put all your apps into</p></li>
@@ -367,7 +357,7 @@ we execute during our CI process for caddy</p></li>
 <h3>tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tests/plugins</span></code> - <code class="docutils literal notranslate"><span class="pre">pytest</span></code> plugins that are used in this project</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tests/test_server</span></code> - tests that ensures that basic <code class="docutils literal notranslate"><span class="pre">django</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/test_server</span></code> - tests that ensure that basic <code class="docutils literal notranslate"><span class="pre">django</span></code>
 stuff is working, should not be removed</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tests/test_apps/test_main</span></code> - example tests for the <code class="docutils literal notranslate"><span class="pre">django</span></code> app,
 could be removed</p></li>
@@ -402,9 +392,6 @@ We also utilize different <code class="docutils literal notranslate"><span class
 <li><p><code class="docutils literal notranslate"><span class="pre">rabbitmq</span></code></p></li>
 <li><p>frontend, like <code class="docutils literal notranslate"><span class="pre">node.js</span></code></p></li>
 </ul>
-<p>To be sure that container is started at the right time,
-we utilize <code class="docutils literal notranslate"><span class="pre">wait-for-it</span></code> <a class="reference external" href="https://github.com/vishnubob/wait-for-it">script</a>.
-It is executed inside <code class="docutils literal notranslate"><span class="pre">docker/django/entrypoint.sh</span></code> file.</p>
 <p>We start containers with <code class="docutils literal notranslate"><span class="pre">tini</span></code>.
 Because this way we have a proper signal handling
 and eliminate zombie processes.
@@ -491,8 +478,8 @@ Read the <a class="reference external" href="https://github.com/krallin/tini">of
     </aside>
   </div>
 </div><script src="../../_static/documentation_options.js?v=01f34227"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>
     </body>
 </html>

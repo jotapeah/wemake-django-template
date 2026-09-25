@@ -50,10 +50,32 @@ That's how this check is executed:
 
 .. code:: bash
 
-  python manage.py lintmigrations --exclude-apps=axes
+  python manage.py lintmigrations
 
 Important note: you might want to exclude some packages with broken migrations.
 Sometimes, there's nothing we can do about it.
+
+
+django-safe-migrations
+----------------------
+
+We use ``django-safe-migrations`` to ensure our database migrations are safe
+to run in production environments without downtime. It provides checks and
+utilities to prevent unsafe operations such as locking tables or breaking
+existing queries.
+
+See `django-safe-migrations <https://github.com/YasserShkeir/django-safe-migrations>`_
+docs, it contains useful information and best practices for writing safe migrations.
+
+That's how this check is executed:
+
+.. code:: bash
+
+  python manage.py check_migrations --exclude-apps=axes
+
+Important note: some third-party apps may include migrations that are not fully safe.
+In such cases, consider reviewing them manually or excluding them from checks
+if no fix is possible.
 
 
 yamllint
@@ -67,16 +89,27 @@ See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
 
 
-djlint
-------
+djangofmt
+---------
 
 Is used to lint and format your ``html`` files.
-See `djlint <https://djlint.com/>`_ docs.
+See `djangofmt <https://github.com/UnknownPlatypus/djangofmt>`_ docs.
 
 .. code:: bash
 
-  djlint --check server
-  djlint --lint server
+  find server -type f -name '*.html' | xargs djangofmt \
+    --line-length=80 --indent-width=2
+
+
+import-linter
+-------------
+
+Is used to lint your architecture and imports all across the project.
+See `import-linter <https://github.com/seddonym/import-linter>`_ docs.
+
+.. code:: bash
+
+  lint-imports
 
 
 dotenv-linter
@@ -88,6 +121,21 @@ See `dotenv-linter <https://github.com/wemake-services/dotenv-linter>`_ docs.
 .. code:: bash
 
   dotenv-linter config/.env config/.env.template
+
+
+Spelling
+--------
+
+We use ``codespell`` and ``typos`` to detect spelling mistakes
+in source code, documentation, and configuration files.
+
+.. code:: bash
+
+  codespell .
+  typos .
+
+Configuration and project-specific exceptions are stored
+in ``pyproject.toml``.
 
 
 polint and dennis
@@ -120,11 +168,6 @@ Linters that are not included
 Sometimes we use several other linters that are not included.
 That's because they require another technology stack to be installed
 or just out of scope.
-
-We also recommend to check the list of linters
-`recommended by wemake-python-styleguide <https://wemake-python-styleguide.rtfd.io/en/latest/pages/usage/integrations/extras.html>`_.
-
-Here's the list of these linters. You may still find them useful.
 
 shellcheck
 ~~~~~~~~~~
